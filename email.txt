@@ -1,48 +1,16 @@
 Project Description
 ---
 
-The goal of Flick is to enable people to share individual windows on
-their computer with other computers. While a similar task is
-accomplished by protocols like VNC, this program will be different.
-From an end-user standpoint, it will appear as if every user were using
-the same computer at the same time without the need of an actual
-remote computer. With Flick, users will be able to ‘flick’ single
-windows onto other user’s computers, even if they are not running the
-same operating system. Most of the process will be handled by X Windows
-running remotely on computers; however, in some cases the program will
-use a modified VNC-like protocol to display select windows on a remote
-computer.
+The goal of Flick is to enable people to share individual windows on their computer with other computers. While a similar task is accomplished by protocols like VNC, this program will be different. From an end-user standpoint, it will appear as if every user were using the same computer at the same time without the need of an actual remote computer. With Flick, users will be able to ‘flick’ single windows onto other user’s computers, even if they are not running the same operating system. Most of the process will be handled by X Windows running remotely on computers; however, in some cases the program will use a modified VNC-like protocol to display select windows on a remote computer.
 
-Let's consider the following an example, you and your co-workers are working on a
-project using different computers at the same time. You may be in the
-same room, on the other side of the building, or across the world. Now,
-you and your partner have programs that you want each other to test
-out, but you cannot send the programs to each other because they are
-too big, cannot configure themselves on the other computer, don’t run
-on the other user’s operating system, or some other reason like that.
-Using technologies like IM and VOIP, one can communicate as they
-would verbally without any change (besides lagtime). However, even using
-these, we cannot share computers. The closest thing we have is the VNC
-protocol, which occupies one whole computer to use another computer
-effectively, tying down two computers for one purpose. But with Flick,
-you and your partner can flick your programs to each other just as if
-you were using each other’s computer, effectively using one computer
-for one purpose, wasting less time, and using fewer processes.
+Let's consider the following an example, you and your co-workers are working on a project using different computers at the same time. You may be in the same room, on the other side of the building, or across the world. Now, you and your partner have programs that you want each other to test out, but you cannot send the programs to each other because they are too big, cannot configure themselves on the other computer, don’t run on the other user’s operating system, or some other reason like that. Using technologies like IM and VOIP, one can communicate as they would verbally without any change (besides lagtime). However, even using these, we cannot share computers. The closest thing we have is the VNC protocol, which occupies one whole computer to use another computer effectively, tying down two computers for one purpose. But with Flick, you and your partner can flick your programs to each other just as if you were using each other’s computer, effectively using one computer for one purpose, wasting less time, and using fewer processes.
 
-Flick can even be used if you are just doing research or in a meeting.
-You can be sharing a window with everyone, and if someone has a good
-idea about changing it, you can just flick them the window, and they can
-change it right there without you having to email them the document,
-hope that they have a program that can open it, and have them email it
-back to you, which could take anywhere between five minutes and a
-couple days. Instead, they can change
-it immediately, without having to worry about having the correct
-program to modify the file.
+Flick can even be used if you are just doing research or in a meeting. You can be sharing a window with everyone, and if someone has a good idea about changing it, you can just flick them the window, and they can change it right there without you having to email them the document, hope that they have a program that can open it, and have them email it back to you, which could take anywhere between five minutes and a couple days. Instead, they can change it immediately, without having to worry about having the correct program to modify the file.
 
 Task List
 ---
 
-Set up P2P connections using sockets in unix environment
+Set up P2P connections using sockets in UNIX environment
     Allow the user to view all other instances of this program that are running on the subnet
     Display the names of the users along with their IP address
     Users run program in the CLI
@@ -85,4 +53,33 @@ Installer
 
 Settings
     Make settings to allow programs that are shared in between the computers render locally instead of processing the entire program remotely
+
+Calendar
+---
+
+Week X-Y (Due: Date)
+	List of what should be done
+	List of what we'd like to have working
+
+Week 1-2 (Due: February 11th)
+	Make basic design decisions, produce outline, task list, and schedule [check]
+	Experiment with X
+Week 3-4 (Due: February 25th)
+	Write basic UNIX command-line interface
+	Finalize planning for LAN prober mechanism
+Week 5-6 (Due: March 11th)
+	Programatic invocation of X and setup of tunnel to remote machine
+	Trial run of basic 'flick' functionality
+Week 7-8 (Due: March 25th)
+	Windows-side development planning (which librar[y/ies] to include)
+	Packaging, build, and distribution decisions
+Week 9-10 (Due: April 8th)
+	Simple GUI design and drafting
+	Create cross-platform mechanism for status daemon
+Week 11-12 (Due: April 22nd)
+	Testing GUI
+	Testing between platforms
+Week 13-14 (Due: May 6th)
+	Extras
+	Things we haven't even thought of yet
 
