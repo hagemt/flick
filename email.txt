@@ -1,98 +1,88 @@
-here is an email, read it, change it, and send it. (dont include this line)
----------------------------------------------------------------------
+Project Description
+---
 
-The Goal of Flick is to enable people to share individual windows on
+The goal of Flick is to enable people to share individual windows on
 their computer with other computers. While a similar task is
 accomplished by protocols like VNC, this program will be different.
-From an end user standpoint it will appear as if every user was using
+From an end-user standpoint, it will appear as if every user were using
 the same computer at the same time without the need of an actual
-remote computer. With flick users will be able to ‘flick’ single
-windows onto other user’s computers even if they are not running the
-same operating system. Most of the process will be handled by X window
-running remotely on computers, however in some cases the program will
-use a modified VNC protocol to display unique windows on a remote
-computer
+remote computer. With Flick, users will be able to ‘flick’ single
+windows onto other user’s computers, even if they are not running the
+same operating system. Most of the process will be handled by X Windows
+running remotely on computers; however, in some cases the program will
+use a modified VNC-like protocol to display select windows on a remote
+computer.
 
-Lets take for example, you and your co workers are working on a
+Let's consider the following an example, you and your co-workers are working on a
 project using different computers at the same time. You may be in the
-same room, on the other side of the building, or across the world. Now
+same room, on the other side of the building, or across the world. Now,
 you and your partner have programs that you want each other to test
 out, but you cannot send the programs to each other because they are
 too big, cannot configure themselves on the other computer, don’t run
 on the other user’s operating system, or some other reason like that.
-Using devices like IM and VOIP and VVOIP one can communicate as they
-would verbally without any change (besides lagtime) however even using
-those we cannot share computers. The closest thing we have is the VNC
-protocol which uses one whole computer to use another computer
-effectively using two computers for the same purpose. But with flick
+Using technologies like IM and VOIP, one can communicate as they
+would verbally without any change (besides lagtime). However, even using
+these, we cannot share computers. The closest thing we have is the VNC
+protocol, which occupies one whole computer to use another computer
+effectively, tying down two computers for one purpose. But with Flick,
 you and your partner can flick your programs to each other just as if
-you were using each other’s computer effectively using one computer
-for one purpose and not wasting time and using less processes.
+you were using each other’s computer, effectively using one computer
+for one purpose, wasting less time, and using fewer processes.
 
 Flick can even be used if you are just doing research or in a meeting.
-You can be sharing a window with everyone and if someone has a good
-idea about changing it you can just flick them the window and they can
+You can be sharing a window with everyone, and if someone has a good
+idea about changing it, you can just flick them the window, and they can
 change it right there without you having to email them the document,
 hope that they have a program that can open it, and have them email it
-back to you which could take anywhere between five minutes and a
-couple days. Instead, by flicking it to the other user they can change
-it immediately without having to worry about having the correct
-program to open the file.
+back to you, which could take anywhere between five minutes and a
+couple days. Instead, they can change
+it immediately, without having to worry about having the correct
+program to modify the file.
+
+Task List
+---
 
 Set up P2P connections using sockets in unix environment
-    Allow the user to view all other instances of this program that
-are running on the local area network. Display the names of the users
-along with their IP address
-    User runs program in the CLI
-    User enters desired username (no name checking)
-    Program Checks multicasts on the nic to find other computers using
-the program
-        -this is a bad idea and a different way of finding other
-computers should be developed
+    Allow the user to view all other instances of this program that are running on the subnet
+    Display the names of the users along with their IP address
+    Users run program in the CLI
+    Users enter desired username (no name checking)
+    Program checks multicasts on the NIC to find other computers using the program
+        Note: This is a bad idea and a different way of finding other computers should be developed (handshake?)
     List of other users on the LAN are displayed
 
 Run X on remote computer over P2P connection
     Get X to run specific tasks based on data sent to the program
-    Based on the list of hosts allow a user to connect to a remote computer
+    Based on the list of hosts, allow a user to connect to a remote computer
     Allow user to send default commands to remote computer
     Have remote computer respond correctly
         Begin X Program
         End X Program
-        Take X program, etc
+        Take X Program, etc
 
 Render X windows that are in use on another computer
-    Research how to switch the display of the a current window to get
-it to show up on the remote computer.
-    Find the window that is in focus and change the display it is
-being rendered on to another computer on X
+    Research how to switch the display of the a current window to get it to show up on the remote computer
+    Find the window that is in focus and change the display it is being rendered on to another computer on X
     Create code to emulate the process
     Test code inside of the socket program
-        handle exceptions when flicking a window that is not yours
+        Handle exceptions, like flicking a window that is not yours
 
 Polish and Debug
-    Polish off some of the edges of the program to make it work nicely
-together
-    "eat your own dog food" - test the program in a real world
-environment and share the program with other people
-    After this stage it we will continue using it in real world
-environments until we stop working on it
+    Polish off some of the edges of the program to make it work nicely together
+    "Eat your own dog food" -- test the program in a real world environment and share the program with other people
+    After this stage it we will continue using it in real world environments until we stop working on it
 
-Cross Platform Capabilities Windows
+Cross Platform Capabilities (Windows)
     Port socket code to winsock
-    Test out windows version of x and program compatibility
-    Compile program on mac
+    Test out windows version of X (XMing) and program compatibility
+    Compile program on Mac
 
-Simple GUI interface
-    Make a simple GUI interface that will explain how all of the
-technology works
+Simple GUI Interface
+    Make a simple GUI interface that will explain how all of the technology works
 
-"Install" program
-    create scripts that will "install" the program on different
-operating systems to allow for users to install the program more
-easily without having to have complex computer knowledge
+Installer
+    Create scripts that will "install" the program on different operating systems to allow for users to install the program more easily without having to have complex computer knowledge
 
-Settings to allow for local rendering
-    Make settings to allow programs that are shared in between the
-computers render locally instead of processing the entire program
-remotely
+Settings
+    Make settings to allow programs that are shared in between the computers render locally instead of processing the entire program remotely
 
