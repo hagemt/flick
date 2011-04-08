@@ -1,4 +1,10 @@
 /* This file is part of Flick. See ./COPYING for legal details. */
+/*
+  This file contains the methods of
+   initilizing a tcp socket server
+   initilizing a tcp socket client
+   sending data over a socket
+*/
 #ifndef _FLICK_TCP_
 #define _FLICK_TCP_
 #include <sys/types.h>
