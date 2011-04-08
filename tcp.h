@@ -40,7 +40,7 @@ void *get_in_addr(struct sockaddr *sa)
 | This function initilizes a socket to wait on a specified port for a tcp
 | connection. This function can be tested simply by running telnet and trying
 | to connect to the localhost on the specified socket
-*/
+\*/
 void initializeTCPServer (int & sockfd, int port) {
   struct addrinfo hints, *servinfo, *p;
   struct sigaction sa;
