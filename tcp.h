@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef tcp_h_
 #define tcp_h_
 #include <stdio.h>
@@ -14,12 +15,16 @@
 #include <sys/wait.h>
 #include <signal.h>
 #include <pthread.h>
+=======
+/* This file is part of Flick. See ./COPYING for legal details. */
+>>>>>>> c1119ce2a6bbb76e79edeb593b604ca5cd040706
 /*
   This file contains the methods of
    initilizing a TCP socket server
    initilizing a TCP socket client
    sending data over a TCP socket
 */
+<<<<<<< HEAD
 
 
 
@@ -92,5 +97,22 @@ void initializeTCPServer (int & sockfd, int port) {
 
 
 
+=======
+#ifndef _FLICK_TCP_
+#define _FLICK_TCP_
+#include <sys/types.h>
+#include <sys/socket.h>
+#include "connection.h"
+
+class TCP_Connection : public Connection {
+public:
+	// TODO type of type?
+	TCP_Connection(const std::string & host, port_num_t port_num) :
+		Connection(host, port_num) { type = TCP; }
+	int open_socket() {
+		return sock = socket(addr.sin_family, SOCK_STREAM, 0);
+	}
+};
+>>>>>>> c1119ce2a6bbb76e79edeb593b604ca5cd040706
 
 #endif
