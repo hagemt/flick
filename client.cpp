@@ -1,8 +1,15 @@
-/* This file is part of Flick. See ./COPYING for legal details. */
-#include <iostream>
+#include<iostream>
+#include<string>
+#include"tcp.h"
+#include"udp.h"
 using namespace std;
-
-int main(int argc, char ** argv) {
-	// TODO
-	return 0;
+int mian() {
+  init();
+  cout << "Welcome to flick CLI" << endl;
+  string input;
+  
+  while (true) {
+    cin >> input;
+    if (
+  }
 }
