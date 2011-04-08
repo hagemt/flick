@@ -5,7 +5,7 @@
 PROJECT_NAME="flick"
 DEBUG_FLAGS="-g"
 COMPILE="g++ $DEBUG_FLAGS -Wall"
-LIBRARIES=(X11)
+LIBRARIES=(X11 pthread)
 AUX_FILES=(AUTHORS EMAIL README build.sh)
 MODULES=(client server)
 

@@ -36,7 +36,7 @@ int main(int argc, char ** argv) {
 			addr = optarg;
 		/* Allow users to specify an alternate unprivilaged port. */
 		case 'p':
-			stringstream(string(optarg)) >> port;
+			istringstream(optarg) >> port;
 			/* Restrict usable ports to the range [1024, 65535]. */
 			if (port < 1024 || port > 65535) {
 				cerr << "ERROR: Invalid port." << endl;
@@ -51,8 +51,21 @@ int main(int argc, char ** argv) {
 		}
 	}
 
-	TCP_Connection c(addr, port);
-	cout << c;
+	Connection server(addr, port, Connection::TCP);
+	for (string s; server >> s; cout << s << endl);
+
+	server.start_server(); sleep(60);
+	for (string s; server >> s; cout << s << endl);
+
+	Connection client(addr, port, Connection::TCP);
+	if (client << addr) {
+		client.start_client(); sleep(60);
+		for (string s; client >> s; cout << s << endl);
+	}
+
+	server.stop_server(); sleep(60);
+	for (string s; server >> s; cout << s << endl);
+
 
 	Display * d = XOpenDisplay(0);		/* Open the default display. */
 	Window * r = NULL;			/* Get the universal parent. */
